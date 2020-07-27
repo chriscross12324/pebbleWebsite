@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'GoogleSansBold';
+  src: url('assets/fonts/googlesans_bold.ttf') format('truetype');
+}
+
+html, body {
+  background-image: linear-gradient(145deg, #ffffff, #ffffff);
+  background-attachment: fixed;
+}
+
+div.wrapper {
+  background-image: linear-gradient(145deg, #3ea7b1, #89ea21);
+  border: none;
+  border-radius: 20px
+}
+
+div.gradientHolder {
+  height: 200px;
+  width: 150px;
+  align-items: center;
+
+}
+
+div.gradientViewer {
+  height: 170px;
+  width: 130px;
+  background-image: linear-gradient(145deg, #7bd485, #74aad4);
+  border: none;
+  border-radius: 20px;
+  margin: auto;
+}
+
+h1.gradientName {
+  font-size: 15px;
+  font-family: "GoogleSansBold";
+  color: #282828;
+  text-align: center;
+}
+
+div.pebbleGroup {
+  height: 240px;
+  width: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  display: inline-block;
+}
+
+img.pebbleLogo {
+  height: 200px;
+
+  /*width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;*/
+}
+
+h1.pebbleText {
+  font-size: 40px;
+  font-family: "GoogleSansBold";
+  color: #282828;
+  display: inline-block;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
