@@ -9,7 +9,7 @@ html, body {
 }
 
 div.wrapper {
-  background-image: linear-gradient(145deg, #3ea7b1, #89ea21);
+
   border: none;
   border-radius: 20px
 }
@@ -21,7 +21,7 @@ div.gradientHolder {
 
 }
 
-div.gradientViewer {
+div.gradientViewers {
   height: 170px;
   width: 130px;
   background-image: linear-gradient(145deg, #7bd485, #74aad4);
@@ -67,9 +67,37 @@ h1.pebbleText {
   display: inline-block;
 }
 
+@media only screen and (max-width: 345px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 10000px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr)
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
