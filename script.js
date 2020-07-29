@@ -25,7 +25,7 @@ function updateTime() {
   } else {
     seconds = date.getSeconds();
   }
-  pebbleText.innerText = "The time is: " + hours + ":" + minutes + ":" + seconds;
+  //pebbleText.innerText = "The time is: " + hours + ":" + minutes + ":" + seconds;
 }
 
 function getGradients() {
@@ -57,13 +57,19 @@ function getGradients() {
                     //h1.innerHTML = itemObject.gradientName;
                     //template.appendChild(h1);
                     toAppend +=
-                      `<div class="gradientHolder"><style>div.gradientHolder {margin: auto; position: relative;}</style>
-                        <div id="marginManager" class="marginManager"><style>div.marginManager {margin-top: 120px;}</style>
-                          <div id="gradientViewer${i}" class="gradientViewer${i}"><style>div.gradientViewer${i} {height: 170px; width: 130px; background-image: linear-gradient(145deg, ${itemObject.startColour}, ${itemObject.endColour}); border: none;
-                          border-radius: 20px;
-                          margin: auto;}</style></div>
-                          <h1 id="gradientName" class="gradientName">${itemObject.gradientName}</h1>
-                        </div>
+                      `<div class="gradientHolder">
+                        <div class="gradientView${i}"><style>div.gradientView${i} {height: 170px; width: 130px; background-image: linear-gradient(145deg, ${itemObject.startColour}, ${itemObject.endColour});
+                          box-shadow: 0px 4px 25px 0px ${itemObject.endColour}; border-radius: 20px; margin: auto; position: relative; z-index: 1;}</style></div>
+                          <div class="infoHolder"><style>div.infoHolder {height: 200px; width: 400px; box-shadow: 0 10px 18px 12px #eeeeee; background: #ffffff;
+                          text-align: center; border-radius: 1rem; position: relative; bottom: 65px; margin: auto;}</style>
+                            <h2 class="gradientName"><style>h2.gradientName {top: 105px; position: relative;}</style>${itemObject.gradientName}</h2>
+                            <div class="hexHolder">
+                              <div class="startColourPreview"></div>
+                              <h4 class="startColourHEX">#232323</h4>
+                              <div class="endColourPreview"></div>
+                              <h4 class="endColourHEX">#454545</h4>
+                            </div>
+                          </div>
                       </div>`;
 
 

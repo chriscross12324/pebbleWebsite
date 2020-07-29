@@ -39,7 +39,7 @@ h1.gradientName {
 
 div.pebbleGroup {
   height: 240px;
-  width: 500px;
+  width: 200px;
   position: absolute;
   top: 0;
   left: 0;
@@ -65,39 +65,18 @@ h1.pebbleText {
   font-family: "GoogleSansBold";
   color: #282828;
   display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
 }
 
-@media only screen and (max-width: 345px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
 
-@media only screen and (max-width: 575px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media only screen and (max-width: 775px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media only screen and (max-width: 10000px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr)
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 20rem));
+  grid-column-gap: 10px;
+  grid-row-gap: 70px;
+  justify-content: center;
+  /*grid-auto-rows: minmax(100px, auto);*/
 }
