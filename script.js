@@ -10,7 +10,6 @@ function getGradients() {
           pebbleLogo.src = "assets/images/icon_pebble_sunshine.png"
 
           let toAppend = '';
-          $(".pebbleGroup").hide();
 
           for (var i = gradientJSON.items.length - 1; i >= 0; i--) {
             var itemObject = gradientJSON.items[i];
@@ -32,7 +31,11 @@ function getGradients() {
             //           </div>`;
 
             toAppend += `
-            <div class="gradientHolder"><style>div.gradientHolder {position: relative;}</style>
+            <div class="gradientHolder"><style>div.gradientHolder {
+              position: relative; transition: 0.2s;
+            } div.gradientHolder:hover {
+              transform: scale(1.1, 1.1);
+            }</style>
               <div class="gradientView${i}"><style>div.gradientView${i} {
                 height: 170px; width: 130px; background-image: linear-gradient(145deg, ${itemObject.startColour}, ${itemObject.endColour});
                 box-shadow: 0px 4px 8px 0px ${itemObject.endColour}; border-radius: 20px; margin: auto; position: relative; z-index: 1;
@@ -48,7 +51,9 @@ function getGradients() {
             </div>
             `;
 
-
+            $(".wrapper").delay(200).animate({opacity: 1}, 500);
+            $(".pebbleGroup").animate({opacity: 0}, 200);
+            //$(".pebbleGroup").delay(300).hide();
 
           }
           $('.wrapper').empty().append(toAppend);

@@ -35,10 +35,8 @@ h1.pebbleText {
   font-size: 40px;
   font-family: "GoogleSansBold";
   color: #282828;
-  display: inline-block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
+  text-align: center;
+
 }
 
 .wrapper {
@@ -47,6 +45,8 @@ h1.pebbleText {
   grid-row-gap: 10px;
   grid-column-gap: 2rem;
   justify-content: center;
+  padding-top: 50px;
   padding-left: 50px;
   padding-right: 50px;
+  opacity: 0;
 }
