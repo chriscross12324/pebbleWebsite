@@ -3,38 +3,14 @@
   src: url('assets/fonts/googlesans_bold.ttf') format('truetype');
 }
 
+/* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}*/
 html, body {
-  background-image: linear-gradient(145deg, #ffffff, #ffffff);
-  background-attachment: fixed;
-}
-
-div.wrapper {
-
-  border: none;
-  border-radius: 20px
-}
-
-div.gradientHolder {
-  height: 200px;
-  width: 150px;
-  align-items: center;
-
-}
-
-div.gradientViewers {
-  height: 170px;
-  width: 130px;
-  background-image: linear-gradient(145deg, #7bd485, #74aad4);
-  border: none;
-  border-radius: 20px;
-  margin: auto;
-}
-
-h1.gradientName {
-  font-size: 15px;
-  font-family: "GoogleSansBold";
-  color: #282828;
-  text-align: center;
+  background-color: #ffffff;
 }
 
 div.pebbleGroup {
@@ -53,11 +29,6 @@ div.pebbleGroup {
 
 img.pebbleLogo {
   height: 200px;
-
-  /*width: auto;
-  margin-left: auto;
-  margin-right: auto;
-  vertical-align: middle;*/
 }
 
 h1.pebbleText {
@@ -70,13 +41,12 @@ h1.pebbleText {
   -webkit-line-clamp: 2;
 }
 
-
-
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 20rem));
-  grid-column-gap: 10px;
-  grid-row-gap: 70px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  grid-row-gap: 10px;
+  grid-column-gap: 2rem;
   justify-content: center;
-  /*grid-auto-rows: minmax(100px, auto);*/
+  padding-left: 50px;
+  padding-right: 50px;
 }
