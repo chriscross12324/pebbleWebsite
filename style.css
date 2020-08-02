@@ -126,8 +126,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .gradientDetailsHolder {
-  width: 45%;
-  height: 60%;
+  width: 40%;
+  height: 50%;
   max-width: 940px;
   max-height: 490px;
   box-shadow: 0px 25px 125px 0px #6b6b6b;
@@ -157,11 +157,13 @@ body::-webkit-scrollbar-thumb {
 .detailsGradientName {
   font-family: "GoogleSansBold";
   color: #282828;
+  margin-right: 50px;
 }
 
 .detailsGradientDescription {
   font-family: "GoogleSansMedium";
   color: #626262;
+  margin-right: 50px;
 }
 
 .buttonClosePopup {

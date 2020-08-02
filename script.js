@@ -1,5 +1,8 @@
 var gradientJSON = [];
 
+$('.gradientDetails').hide();
+$(".gradientDetails").animate({opacity: 0}, 200);
+
 function getGradients() {
   var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwFkoSBTbmeB6l9iIiZWGczp9sDEjqX0jiYeglczbLKFAXsmtB1/exec";
   $(document).ready(function() {
@@ -31,7 +34,7 @@ function getGradients() {
             //           </div>`;
 
             toAppend += `
-            <div class="gradientHolder"><style>div.gradientHolder {
+            <div class="gradientHolder" id="gradientHolder" data-value="${i}"><style>div.gradientHolder {
               position: relative; transition: 0.2s;
             } div.gradientHolder:hover {
               transform: scale(1.1, 1.1);
@@ -66,3 +69,31 @@ function getGradients() {
       });
   });
 }
+
+$('.pebbleGroup').click(function (event) {
+  event.preventDefault();
+  console.log('bruh');
+});
+
+$('.wrapper').on('click', '.gradientHolder', function(event) {
+  event.preventDefault();
+  var position = $(this).data('value');
+  var name = gradientJSON.items[position].gradientName;
+  var start = gradientJSON.items[position].startColour;
+  var end = gradientJSON.items[position].endColour;
+  var description = gradientJSON.items[position].description;
+  $('.gradientDetails').show();
+  $(".gradientDetails").animate({opacity: 1}, 200);
+  $('.detailsGradientViewer').css({'background-image': 'linear-gradient(145deg,' + start +',' + end +')', 'box-shadow': '0px 4px 8px 0px' + end});
+  $('.detailsGradientName').text(name);
+  $('.detailsGradientDescription').text(description);
+  //console.log(document.getElementsByClass('gradientHolder').getAttribute('data-myValue'));
+  console.log(start);
+  console.log(end);
+});
+
+$('.buttonClosePopup').click(function (event) {
+  event.preventDefault();
+  $(".gradientDetails").animate({opacity: 0}, 200);
+  $(".gradientDetails").delay(300).hide(0);
+});
