@@ -38,14 +38,17 @@ function getGradients() {
             }</style>
               <div class="gradientView${i}"><style>div.gradientView${i} {
                 height: 170px; width: 130px; background-image: linear-gradient(145deg, ${itemObject.startColour}, ${itemObject.endColour});
-                box-shadow: 0px 4px 8px 0px ${itemObject.endColour}; border-radius: 20px; margin: auto; position: relative; z-index: 1;
+                box-shadow: 0px 4px 8px 0px ${itemObject.endColour}; border-radius: 20px; margin: auto; position: relative; z-index: 1; cursor: pointer;
               }</style></div>
               <div class="infoHolder"><style>div.infoHolder {
                 height: 200px; box-shadow: 0px 10px 18px 12px #eeeeee; background: #ffffff; text-align: center; border-radius: 1rem;
-                position: relative; bottom: 65px; margin: auto;
+                position: relative; bottom: 65px; margin: auto; cursor: pointer;
               }</style>
                 <h2 class="gradientName">${itemObject.gradientName}<style>h2.gradientName {
+                  display: -webkit-box;
                   top: 100px; position: relative; font-family: "GoogleSansBold";
+                  overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+                  margin-left: 25px; margin-right: 25px;
                 }</style></h2>
               </div>
             </div>

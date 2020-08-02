@@ -2,6 +2,10 @@
   font-family: 'GoogleSansBold';
   src: url('assets/fonts/googlesans_bold.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'GoogleSansMedium';
+  src: url('assets/fonts/googlesans_medium.ttf') format('truetype');
+}
 
 /* {
   box-sizing: border-box;
@@ -36,7 +40,6 @@ h1.pebbleText {
   font-family: "GoogleSansBold";
   color: #282828;
   text-align: center;
-
 }
 
 .wrapper {
@@ -49,4 +52,123 @@ h1.pebbleText {
   padding-left: 50px;
   padding-right: 50px;
   opacity: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 20px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+          /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: grey;    /* color of the scroll thumb */
+  border-radius: 10px;       /* roundness of the scroll thumb */
+  border: 7px solid white;  /* creates padding around scroll thumb */
+}
+
+.navbar {
+  background-color: rgba(225, 225, 225, 0.6);
+  backdrop-filter: blur(30px);
+  overflow: hidden;
+  position: fixed;
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  border-radius: 1rem;
+  z-index: 2;
+  margin-bottom: 20px;
+  margin-left: 2.1%;
+}
+
+.navbar ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "GoogleSansBold";
+  color: #212121;
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.gradientDetails {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(30px);
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+}
+
+.gradientDetailsHolder {
+  width: 45%;
+  height: 60%;
+  max-width: 940px;
+  max-height: 490px;
+  box-shadow: 0px 25px 125px 0px #6b6b6b;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
+}
+
+.detailsGradientViewer {
+  background-image: linear-gradient(145deg, #f6d365, #fda085);
+  border-radius: 1.5rem;
+  height: 260px;
+  width: 170px;
+  margin-left: 50px;
+}
+
+.detailsGradientInfo {
+  margin-left: 50px;
+}
+
+.detailsGradientName {
+  font-family: "GoogleSansBold";
+  color: #282828;
+}
+
+.detailsGradientDescription {
+  font-family: "GoogleSansMedium";
+  color: #626262;
+}
+
+.buttonClosePopup {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  top: 25px;
+  right: 25px;
+  position: absolute;
 }
